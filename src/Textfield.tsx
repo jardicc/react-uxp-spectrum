@@ -12,6 +12,8 @@ type Props = {
   children?: React.ReactNode;
   onChange?: (e: Spectrum.TextfieldEvent) => void;
   onInput?: (e: Spectrum.TextfieldEvent) => void;
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
   className?: string;
   disabled?: boolean;
   invalid?: boolean;
@@ -32,6 +34,8 @@ declare global {
         class?: string;
         onInput?: (e: React.ChangeEvent<HTMLInputElement>) => void;
         onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+        onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+        onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
         disabled?: boolean;
         invalid?: boolean;
         placeholder?: string;
@@ -88,6 +92,8 @@ export default function Textfield(props: Props) {
       type={props.type}
       valid={props.valid || undefined}
       value={props.value}
+      onBlur={props.onBlur}
+      onFocus={props.onFocus}
       size={props?.size || SpectrumComponetDefaults.defaultSize}
     >
       {props?.children}

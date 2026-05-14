@@ -23,6 +23,9 @@
     "url": "https://github.com/thejustinwalsh/react-uxp-spectrum/issues"
   },
   "homepage": "https://github.com/thejustinwalsh/react-uxp-spectrum#readme",
+  "dependencies": {
+    "react": ">=17.0.2"
+  },
   "devDependencies": {
     "@types/react": ">=17.0.11",
     "@typescript-eslint/eslint-plugin": "4.27.0",
@@ -36,7 +39,6 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.3.1",
-    "react": ">=17.0.2",
     "typedoc": "^0.21.0",
     "typescript": "^4.3.4"
   }
