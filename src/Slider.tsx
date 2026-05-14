@@ -23,6 +23,7 @@ type Props = {
   valueLabel?: string;
   variant?: Spectrum.SliderVariant;
   size?: SpectrumComponentSize;
+  step?: number;
 };
 
 declare global {
@@ -41,6 +42,7 @@ declare global {
         'value-label'?: string;
         variant?: Spectrum.SliderVariant;
         size?: SpectrumComponentSize;
+        step?: number;
       };
     }
   }
@@ -91,6 +93,7 @@ export default function Slider(props: Props) {
       value-label={props.valueLabel}
       variant={props.variant}
       size={props?.size || SpectrumComponetDefaults.defaultSize}
+      step={props.step}
     >
       {props?.children}
     </sp-slider>
